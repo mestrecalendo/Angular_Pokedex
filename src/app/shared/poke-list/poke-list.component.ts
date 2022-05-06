@@ -1,3 +1,5 @@
+import { Observable } from 'rxjs';
+import { PokeApiService } from './../../service/poke-api.service';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -6,7 +8,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./poke-list.component.scss'],
 })
 export class PokeListComponent implements OnInit {
-  constructor() {}
+  public getAllPokemons: any;
 
-  ngOnInit(): void {}
+  constructor(private pokeApiService: PokeApiService) {}
+
+  ngOnInit(): void {
+    this.pokeApiService.listAllPokemons.subscribe((res) => {
+      this.getAllPokemons = res.results;
+      console.log(this.getAllPokemons);
+    });
+  }
 }

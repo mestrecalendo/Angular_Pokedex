@@ -15,12 +15,15 @@
     display: flex;
     justify-content: space-between;
     width: 42%;
+    height: rem-calc(140);
     margin: rem-calc(10) 0;
     padding: rem-calc(20);
     border-radius: rem-calc(10);
   }
 
   .pokemon__info {
+    width: 100%;
+
     h2 {
       font-size: rem-calc(22);
       font-weight: 900;
@@ -40,10 +43,13 @@
   }
 
   .pokemon__img {
-    background: url(../../../assets/background/background-list-pokemon.svg);
-
+    background: url(../../../assets/background/background-list-pokemon.svg) no-repeat center;
+    background-size: contain;
+    display: flex;
+    width: 100%;
     justify-content: center;
     align-items: center;
+    align-items: stretch;
 
     img {
       width: 100%;
