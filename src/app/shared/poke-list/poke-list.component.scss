@@ -3,12 +3,15 @@
 
 
 :host {
-  display: flex;
-  align-items: center;
-  justify-items: center;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  flex-direction: row;
+  #main {
+    display: flex;
+    align-items: center;
+    justify-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    flex-direction: row;
+  }
+
 
   .pokemon {
     background-color: var(--branco);
