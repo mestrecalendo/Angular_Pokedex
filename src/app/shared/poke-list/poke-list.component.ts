@@ -1,4 +1,3 @@
-import { Observable } from 'rxjs';
 import { PokeApiService } from './../../service/poke-api.service';
 import { Component, OnInit } from '@angular/core';
 
@@ -17,12 +16,10 @@ export class PokeListComponent implements OnInit {
     this.pokeApiService.listAllPokemons.subscribe((res) => {
       this.setAllPokemons = res.results;
       this.getAllPokemons = this.setAllPokemons;
-      console.log(this.getAllPokemons);
     });
   }
 
   public searchPokemon(value: string) {
-    console.log(value);
     const filter = this.setAllPokemons.filter((res: any) => {
       return !res.name.indexOf(value.toLowerCase());
     });
